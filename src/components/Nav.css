@@ -1,0 +1,10 @@
+.divLinks a {
+  text-decoration: none;
+  color: var(--green);
+}
+
+.contactBtn:focus,
+.contactBtn:active {
+  box-shadow: none !important;
+  outline: none !important;
+}

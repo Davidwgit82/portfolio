@@ -1,0 +1,13 @@
+/* Bouton.css */
+.bouton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 250px;
+}
+
+.aLink {
+  color: var(--green);
+}

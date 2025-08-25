@@ -1,0 +1,14 @@
+.h2 {
+  background-color: var(--charcoal-gray) !important;
+  color: var(--blancr);
+}
+
+.phero {
+  background-color: var(--green);
+  color: var(--blancr);
+  font-size: 20px;
+}
+
+.textImg {
+  margin-top: 50px !important;
+}

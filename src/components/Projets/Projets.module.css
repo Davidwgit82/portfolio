@@ -1,0 +1,64 @@
+.h3 {
+  background-color: var(--charcoal-gray) !important;
+  color: var(--blancr);
+}
+
+.aLink {
+  color: var(--blancr);
+  font-size: 14px;
+  margin-right: 30px;
+}
+
+.images {
+  height: 200px !important;
+}
+
+/* boutons animés */
+.animatedBtn {
+  background-color: var(--charcoal-gray);
+  width: 192px; /* 48 * 4px = 192px (équivalent w-48) */
+  height: 56px; /* 14 * 4px = 56px (équivalent h-14) */
+  border: none;
+  border-radius: 16px; /* équivalent rounded-2xl */
+  color: var(--noir);
+  font-size: 1.25rem; /* équivalent text-xl */
+  font-weight: 600; /* équivalent font-semibold */
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btnIcon {
+  background-color: var(--green); /* équivalent bg-green-400 */
+  border-radius: 12px; /* équivalent rounded-xl */
+  height: 48px; /* h-12 */
+  width: 25%; /* w-1/4 */
+  position: absolute;
+  right: 4px; /* right-1 */
+  top: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: width 0.5s ease;
+}
+
+.animatedBtn:hover .btnIcon {
+  width: 184px; /* presque toute la largeur du bouton */
+}
+
+.btnText {
+  transform: translateX(-8px); /* translate-x-2 mais à gauche */
+  transition: transform 0.3s ease;
+}
+
+.btnIcon svg {
+  width: 25px;
+  height: 25px;
+  /* Flèche vers la droite au lieu de la gauche */
+  transform: rotate(180deg);
+}
+
+.bown {
+  margin-top: 18px !important;
+}

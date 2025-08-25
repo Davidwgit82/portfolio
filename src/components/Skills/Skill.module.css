@@ -1,0 +1,14 @@
+.h2 {
+  background-color: var(--charcoal-gray) !important;
+  color: var(--blancr);
+}
+
+.skillis {
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+  margin-top: 18px !important;
+}
+
+.skillis:hover {
+  border-color: #3a7d54;
+}

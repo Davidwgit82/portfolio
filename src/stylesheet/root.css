@@ -1,0 +1,11 @@
+:root {
+  --font-family: "Tilt Neon", sans-serif;
+
+  /* couleurs palettes */
+  --charcoal-gray: #2d2e32;
+  --green: #3a7d54;
+  --blancr: #fefdf5;
+  --blanc: #ffffff; /* blanc pur */
+  /* marges */
+  --small: 13px;
+}
