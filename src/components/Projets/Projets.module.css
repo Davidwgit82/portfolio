@@ -10,31 +10,33 @@
 }
 
 .images {
+  width: 250px !important;
   height: 200px !important;
+  object-fit: cover;
 }
 
-/* boutons animés */
+/* boutons animés 
 .animatedBtn {
   background-color: var(--charcoal-gray);
-  width: 192px; /* 48 * 4px = 192px (équivalent w-48) */
-  height: 56px; /* 14 * 4px = 56px (équivalent h-14) */
+  width: 192px; /* 48 * 4px = 192px (équivalent w-48) 
+  height: 56px; /* 14 * 4px = 56px (équivalent h-14) 
   border: none;
-  border-radius: 16px; /* équivalent rounded-2xl */
+  border-radius: 16px; /* équivalent rounded-2xl 
   color: var(--noir);
-  font-size: 1.25rem; /* équivalent text-xl */
-  font-weight: 600; /* équivalent font-semibold */
+  font-size: 1.25rem; /* équivalent text-xl 
+  font-weight: 600; /* équivalent font-semibold 
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
 }
 
 .btnIcon {
-  background-color: var(--green); /* équivalent bg-green-400 */
-  border-radius: 12px; /* équivalent rounded-xl */
-  height: 48px; /* h-12 */
-  width: 25%; /* w-1/4 */
+  background-color: var(--green); /* équivalent bg-green-400 
+  border-radius: 12px; /* équivalent rounded-xl 
+  height: 48px; /* h-12 
+  width: 25%; /* w-1/4 
   position: absolute;
-  right: 4px; /* right-1 */
+  right: 4px; /* right-1 
   top: 4px;
   display: flex;
   align-items: center;
@@ -44,21 +46,106 @@
 }
 
 .animatedBtn:hover .btnIcon {
-  width: 184px; /* presque toute la largeur du bouton */
+  width: 184px; /* presque toute la largeur du bouton 
 }
 
 .btnText {
-  transform: translateX(-8px); /* translate-x-2 mais à gauche */
-  transition: transform 0.3s ease;
+  transform: translateX(-8px); 
 }
 
 .btnIcon svg {
   width: 25px;
   height: 25px;
-  /* Flèche vers la droite au lieu de la gauche */
   transform: rotate(180deg);
 }
 
 .bown {
   margin-top: 18px !important;
+} */
+
+
+/* Container pour l'image avec positionnement relatif */
+.imageContainer {
+  position: relative;
 }
+
+/* Badge animé en bleu lapis */
+.badgeEnCours {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+  color: #fefdf5;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 2px 8px rgba(30, 58, 138, 0.3);
+  animation: badgePulse 2s ease-in-out infinite;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Animation du badge */
+@keyframes badgePulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 2px 8px rgba(30, 58, 138, 0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.5);
+  }
+}
+
+/* Animation de l'icône dans le badge */
+.badgeIcon {
+  animation: iconSpin 3s linear infinite;
+}
+
+@keyframes iconSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Styles du bouton existant */
+.animatedBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: var(--green);
+  color: #fefdf5;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.animatedBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+  color: #fefdf5;
+  text-decoration: none;
+}
+
+.aLink {
+  color: inherit;
+}
+
+.btnIcon {
+  width: 16px;
+  height: 16px;
+  color: currentColor;
+  transition: transform 0.3s ease;
+}
+
+.animatedBtn:hover .btnIcon {
+  transform: translateX(4px);
+}
+

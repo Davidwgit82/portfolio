@@ -1,22 +1,22 @@
-import React from "react";
-import Navbar from "./components/Navbar";
+import React, { useEffect } from "react";
 import Hero from "./components/Hero/Hero";
 import Skill from "./components/Skills/Skill";
 import Projets from "./components/Projets/Projets";
-import Footer from "./components/Footer";
 
 // styles css
 import cls from "./Home.module.css";
+import Header from "./components/Header";
 const Home = () => {
+  useEffect(() => {
+    document.title = "Accueil";
+  });
   return (
     <div className={`${cls.appContain}`}>
-      <Navbar />
       <main>
         <Hero />
         <Skill />
         <Projets />
       </main>
-      <Footer />
     </div>
   );
 };

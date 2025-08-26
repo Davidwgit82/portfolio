@@ -1,10 +1,10 @@
 import React, { useState, useRef } from "react";
-import "./Nav.css";
+import "./Header.module.css";
 import Bouton from "./Bouton/Bouton";
 import cls from "./Bouton/Bouton.module.css";
 import { Toast, ToastContainer } from "react-bootstrap";
 
-const Navbar = () => {
+const Header = () => {
   const formRef = useRef();
   const [showToast, setShowToast] = useState(false);
 
@@ -62,11 +62,6 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav d-flex flex-row flex-wrap gap-2 mx-auto text-center">
               <li className="nav-item">
-                <a className="nav-link" href="#moi">
-                  Un peu sur moi
-                </a>
-              </li>
-              <li className="nav-item">
                 <a className="nav-link" href="#competences">
                   Compétences
                 </a>
@@ -101,7 +96,7 @@ const Navbar = () => {
                   data-bs-target="#offcanvasContact"
                   aria-controls="offcanvasContact"
                 >
-                  Me contacter
+                  Appelez-moi
                 </a>
               </Bouton>
             </div>
@@ -185,7 +180,6 @@ const Navbar = () => {
               </p>
             </div>
           </form>
-          {/* Formulaire simple de contact */}
         </div>
       </div>
 
@@ -198,10 +192,7 @@ const Navbar = () => {
           autohide
           bg="success"
         >
-          <Toast.Header closeButton={false}>
-            <strong className="me-auto">Notification</strong>
-          </Toast.Header>
-          <Toast.Body className="text-white">
+          <Toast.Body closeButton={true} className="text-white">
             Bien reçu. Vous serez contacté dans un instant...
           </Toast.Body>
         </Toast>
@@ -210,4 +201,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Header;
